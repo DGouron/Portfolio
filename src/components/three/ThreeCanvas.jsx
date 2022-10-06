@@ -1,20 +1,41 @@
-import React from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Suspense } from 'react'
-import Scene from './Scene'
-import { Loader } from '@react-three/drei'
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
+import Scene from './Scene';
+import { Html, Loader } from '@react-three/drei';
 
 function ThreeCanvas() {
   return (
     <div className='canvas__container'>
-        <Canvas shadows>
-            <Suspense fallback={null}> {/* Load this component after the dom was completly loaded */}
-            <Scene />
-            </Suspense>
-        </Canvas>
-        <Loader />
+      <Canvas shadows>
+        <Suspense
+          fallback={
+            <Html>
+              <h2
+                style={{
+                  width: '600px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  height: '100%',
+                  fontSize: '2rem',
+                  borderBottom: '1px solid #fff',
+                  padding: '20px',
+                }}
+              >
+                Ouverture de la scène
+              </h2>
+            </Html>
+          }
+        >
+          {' '}
+          {/* Load this component after the dom was completly loaded */}
+          <Scene />
+        </Suspense>
+      </Canvas>
+      <Loader />
     </div>
-  )
+  );
 }
 
-export default ThreeCanvas
+export default ThreeCanvas;
