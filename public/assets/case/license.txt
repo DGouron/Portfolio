@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci fi Case
+* source:	https://sketchfab.com/3d-models/sci-fi-case-c59c954c785b4b4488362ef8bb866dfe
+* author:	KonstantinaBeratze (https://sketchfab.com/KonstantinaBeratze)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci fi Case" (https://sketchfab.com/3d-models/sci-fi-case-c59c954c785b4b4488362ef8bb866dfe) by KonstantinaBeratze (https://sketchfab.com/KonstantinaBeratze) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
