@@ -1,0 +1,84 @@
+body{
+  background: #f4f4f4;
+  color: #333;
+}
+h1, h2{
+  font-family: "Spacetime";
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+header{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+}
+header > *{
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+header > * > img{
+  width: 100%;
+  max-width: 600px;
+  object-fit: cover;
+  height: auto;
+  border-radius: 10px;
+}
+.contact-button{
+  color: #FFFFFF;
+  background: #ad690f;
+  font-size: clamp(12px, 8vw, 20px);
+  font-weight: 400;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0;
+  border-radius: 0px 20px 0px 0px;
+  width: 195px;
+  height: 40px;
+  cursor: pointer;
+
+  transform: rotate(0) skewX(25deg)
+  translate(0, 0);
+
+  position: relative;
+  left: 45%;
+  transition: all 0.5s;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, .5);
+}
+.contact-button::before{
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  width: 10px;
+  height: 100%;
+  background: #795a5a;
+  transform: skewY(-45deg);
+}
+.contact-button::after{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: -5px;
+  width: 195px;
+  height: 10px;
+  background: #795a5a;
+  transform: skewX(-45deg);
+}
+.contact-button:hover{
+  transform: rotate(0) skewX(25deg) translate(20px, -20px);
+  box-shadow: -30px 30px 10px rgba(0, 0, 0, .55);
+  text-shadow: 0 0 10px #FFFFFF;
+  font-weight: 500;
+}
+.About-Contact{
+  justify-content: left;
+    align-items: left;
+}
