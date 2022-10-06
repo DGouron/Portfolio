@@ -21,6 +21,10 @@ function ThreeCanvas() {
                   fontSize: '2rem',
                   borderBottom: '1px solid #fff',
                   padding: '20px',
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
                 }}
               >
                 Ouverture de la scène
