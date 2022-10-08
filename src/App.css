@@ -26,7 +26,7 @@ h2 {
   font-size: 1rem;
   letter-spacing: 0.06rem;
   line-height: 1.2;
-  margin: 0;
+  margin: 20px 0px 0px 20px;
 }
 p {
   font-family: 'Montserrat', sans-serif;
@@ -47,14 +47,46 @@ p {
   gap: 10px;
   margin: 10px;
 }
+.button__cta {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
+}
+.button__cta {
+  background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #000000;
+  border: none;
+}
+.button__cta:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
 
 /*Device too slow only : replace threejs*/
+.mobile__herobanner--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 .portrait_image {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 256px;
+  height: 256px;
   object-fit: cover;
   object-position: center;
   padding: 10px;
