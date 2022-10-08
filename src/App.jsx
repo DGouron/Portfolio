@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import CallToAction from './components/buttons/CallToAction';
 import ContactView from './components/contact/ContactView';
 import Header from './components/header/Header';
 import Portrait from './components/portrait/Portrait';
@@ -12,7 +13,14 @@ function App() {
     <div className='body__wrapper'>
       <div className='body__content--head'>
         <Header />
-        {window.screen && window.screen.width > 768 ? <ThreeCanvas /> : <Portrait />}
+        {window.screen && window.screen.width > 768 ? (
+          <ThreeCanvas />
+        ) : (
+          <div className='mobile__herobanner--container'>
+            <Portrait />
+            <CallToAction text={'Me contacter'} action={'mail'} />
+          </div>
+        )}
       </div>
       <main>
         <ProjectsView />
