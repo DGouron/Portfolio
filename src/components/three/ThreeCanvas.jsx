@@ -32,7 +32,6 @@ function ThreeCanvas() {
             </Html>
           }
         >
-          {' '}
           {/* Load this component after the dom was completly loaded */}
           <Scene />
         </Suspense>
