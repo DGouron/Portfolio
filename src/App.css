@@ -10,7 +10,8 @@ body {
 #projects,
 #skills,
 #contact {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100vw;
 }
 h1 {
@@ -73,7 +74,57 @@ p {
   color: #fff;
   text-decoration: none;
 }
-
+.button__cta--small {
+  width: 60%;
+  height: 48px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06rem;
+  line-height: 1;
+  padding: 10px 20px;
+}
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  margin: 5px;
+}
+.project__item--wrapper {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px #000000;
+  padding: 10px;
+}
+.project__item--wrapper:hover .project__item--title {
+  color: #68f563;
+}
+.project__item--title {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
+  transition: 0.5s;
+}
+.project__item--description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.06rem;
+  line-height: 1.2;
+}
+.project__item--thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.project__item--details > * {
+  font-size: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
 /*Device too slow only : replace threejs*/
 .mobile__herobanner--container {
   display: flex;
