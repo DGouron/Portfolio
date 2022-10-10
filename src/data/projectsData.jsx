@@ -39,6 +39,18 @@ export const ProjectsData = [
     ],
   },
   {
+    projectName: 'Ancien Portfolio',
+    projectLink: 'https://dgouron.netlify.app/',
+    projectDescription:
+      "Ancien portfolio qui présentait mes travaux et m'a permis d'apprendre React.",
+    projectLargeImage: '/assets/thumbnails/Large_oldPortfolioReact.png',
+    projectDetails: [
+      '- Front avec React',
+      '- Utilisation de Router pour le Client Side Routing',
+      '- Nginx pour la gestion du reverse proxy (Projet initialement héberger sur un VPS OVH)',
+    ],
+  },
+  {
     projectName: 'Print Message Visualizer',
     projectLink: 'https://www.unrealengine.com/marketplace/en-US/product/print-message-visualizer',
     projectDescription:
@@ -49,13 +61,5 @@ export const ProjectsData = [
       '- Tracking des données joueurs',
       '- Sauvegarde des données',
     ],
-  },
-  {
-    projectName: 'To-do list',
-    projectLink: 'https://dgouron-todolist.netlify.app/',
-    projectDescription:
-      "Création d'une To-do list et clonage de la page principale du site Todoist.",
-    projectLargeImage: '/assets/thumbnails/Large_ToDoList.png',
-    projectDetails: ['- Front avec React'],
   },
 ];
