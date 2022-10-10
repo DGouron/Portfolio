@@ -125,6 +125,7 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
+
 /*Device too slow only : replace threejs*/
 .mobile__herobanner--container {
   display: flex;
@@ -169,5 +170,26 @@ p {
   }
   canvas {
     border-radius: 20px;
+  }
+  .projects__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 40px;
+  }
+  .project__item--wrapper {
+    flex: 1 1 30%;
+    height: 600px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s;
+  }
+  .project__item--wrapper:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px #000000;
+  }
+  .project__item--thumbnail {
+    height: 300px;
+    border-radius: 15px;
   }
 }
