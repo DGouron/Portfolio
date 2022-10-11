@@ -18,13 +18,17 @@ function SkillsView() {
         <CallToAction
           text={'Télécharger CV'}
           action={'link'}
-          additionnalClass={'button__cta--small'}
+          additionnalClass={'button__cta--small button__cta--flex'}
           args={{ icon: 'assets/icons/download_icon.svg' }}
         />
       </a>
       <div className='skills__list'>
         {SkillsData[1].map((skill) => (
-          <SoftSkillItem skillName={skill.skillName} skillIcon={skill.skillIcon} />
+          <SoftSkillItem
+            skillName={skill.skillName}
+            skillIcon={skill.skillIcon}
+            skillIconAlt={skill.skillIconAlt}
+          />
         ))}
       </div>
       <h2 className='skillsview__section--title'>Hardskills</h2>
@@ -34,6 +38,7 @@ function SkillsView() {
             skillName={skill.skillName}
             skillIcon={skill.skillIcon}
             skillColor={skill.skillColor}
+            skillIconAlt={skill.skillIconAlt}
           />
         ))}
       </div>
