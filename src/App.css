@@ -51,7 +51,8 @@ h2 {
   line-height: 1.2;
   margin: 20px 0px 0px 20px;
 }
-.projectsview__section--title {
+.projectsview__section--title,
+.skillsview__section--title {
   font-weight: 600;
   font-size: 1.5rem;
   padding-left: 30px;
@@ -83,8 +84,6 @@ p {
   font-size: 1rem;
   letter-spacing: 0.06rem;
   line-height: 1.2;
-}
-.button__cta {
   background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
   margin: 10px;
   padding: 15px 45px;
@@ -100,7 +99,10 @@ p {
 .button__cta:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
-  text-decoration: none;
+}
+.button__cta--icon {
+  width: 24px;
+  height: 24px;
 }
 .button__cta--small {
   width: 60%;
@@ -109,6 +111,13 @@ p {
   letter-spacing: 0.06rem;
   line-height: 1;
   padding: 10px 20px;
+}
+.button__cta:first-child:type(.button__cta--icon) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .projects__list {
   display: flex;
@@ -155,7 +164,34 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
-
+#skills .skillsview__section--link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+}
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.softskill__item--icon,
+.hardskill__item--icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.hardskill__item--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.softskill__item--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
 /*Device too slow only : replace threejs*/
 .mobile__herobanner--container {
   display: flex;
