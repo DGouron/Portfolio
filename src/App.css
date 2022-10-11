@@ -112,7 +112,7 @@ p {
   line-height: 1;
   padding: 10px 20px;
 }
-.button__cta:first-child:type(.button__cta--icon) {
+.button__cta--flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
