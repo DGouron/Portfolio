@@ -1,11 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import SendContact from './SendContact';
 
 function ContactForm() {
+  const [sent, setSent] = useState(false);
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    setSent(true);
 
     emailjs.sendForm('service_50pw5io', 'template_vlo4jqa', e.target, 'QFsy-l7_SRjQhgDes').then(
       () => {
@@ -22,20 +25,19 @@ function ContactForm() {
   return (
     <article id='contact'>
       <form className='contact__form--container' ref={form} onSubmit={sendEmail}>
-        <label htmlFor='name'>
-          Nom et prénom :
+        <div className='contact__form--content'>
           <input type='text' id='name' name='name' required />
-        </label>
-        <label htmlFor='email'>
-          Email :
+          <label htmlFor='name'>Nom et prénom</label>
+        </div>
+        <div className='contact__form--content'>
           <input type='email' id='email' name='email' required />
-        </label>
-
-        <label htmlFor='message'>
-          Message :
+          <label htmlFor='email'>Email</label>
+        </div>
+        <div className='contact__form--content'>
           <textarea id='message' name='message' required />
-        </label>
-        <SendContact />
+          <label htmlFor='message'>Message</label>
+        </div>
+        <SendContact sent={sent} />
       </form>
     </article>
   );
@@ -45,6 +47,7 @@ function ContactForm() {
     contactResponse.textContent = message;
     setTimeout(() => {
       contactResponse.textContent = 'Envoyer';
+      setSent(false);
     }, 3000);
   }
 }

@@ -52,11 +52,13 @@ h2 {
   margin: 20px 0px 0px 20px;
 }
 .projectsview__section--title,
-.skillsview__section--title {
+.skillsview__section--title,
+.contactview__section--title {
   font-weight: 600;
   font-size: 1.5rem;
   padding-left: 30px;
   padding-bottom: 15px;
+  margin-top: 50px;
 }
 p {
   font-family: 'Montserrat', sans-serif;
@@ -194,14 +196,66 @@ p {
 }
 .contact__form--container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 10px;
-  margin: 5px;
+  gap: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
+.contact__form--content {
+  position: relative;
+  width: 250px;
+  padding-top: 16px;
+}
+.contact__form--content input,
+.contact__form--content textarea {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.contact__form--content label {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.contact__form--content input:valid ~ label,
+.contact__form--content input:focus ~ label,
+.contact__form--content textarea:valid ~ label,
+.contact__form--content textarea:focus ~ label {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 20px;
+  background: #1d2b3a;
+  border-radius: 5px;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+
+.contact__form--content input:valid,
+.contact__form--content input:focus,
+.contact__form--content textarea:valid,
+.contact__form--content textarea:focus {
+  border: 1px solid #00dfc4;
+}
+
 /*Device too slow only : replace threejs*/
 .mobile__herobanner--container {
   display: flex;
