@@ -49,7 +49,7 @@ h2 {
   font-size: 1rem;
   letter-spacing: 0.06rem;
   line-height: 1.2;
-  margin: 20px 0px 0px 20px;
+  padding: 20px;
 }
 .projectsview__section--title,
 .skillsview__section--title,
@@ -77,7 +77,6 @@ p {
   align-items: center;
   text-align: center;
   gap: 10px;
-  margin: 10px;
 }
 .button__cta {
   cursor: pointer;
@@ -128,14 +127,17 @@ p {
   align-items: center;
   text-align: center;
   gap: 15px;
-  margin: 5px;
+  padding: 0;
+  margin: 0;
 }
 .project__item--wrapper {
   display: flex;
   flex-direction: column;
+  background: white;
   box-shadow: 0 0 10px #000000;
-  padding: 10px;
+  width: 90vw;
   justify-content: space-between;
+  margin-left: -18px;
 }
 .project__item--wrapper:hover .project__item--title {
   color: #68f563;
