@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Footer() {
-  return <footer>Tout droits réservés Damien Gouron - 2022</footer>;
+  return <footer>© 2022 - All Rigth reserved - Damien Gouron </footer>;
 }
 
 export default Footer;
