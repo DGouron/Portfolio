@@ -28,6 +28,7 @@ function SkillsView() {
             skillName={skill.skillName}
             skillIcon={skill.skillIcon}
             skillIconAlt={skill.skillIconAlt}
+            key={skill.skillName}
           />
         ))}
       </div>
@@ -39,6 +40,7 @@ function SkillsView() {
             skillIcon={skill.skillIcon}
             skillColor={skill.skillColor}
             skillIconAlt={skill.skillIconAlt}
+            key={skill.skillName}
           />
         ))}
       </div>

@@ -8,7 +8,7 @@ function SendContact({ sent }) {
       disabled={sent}
     >
       <p id='contact__response'>Envoyer</p>
-      <img src='assets/icons/send_icon.svg' className='button__cta--icon' />
+      <img src='assets/icons/send_icon.svg' className='button__cta--icon' alt="Icone d'envois" />
     </button>
   );
 }
