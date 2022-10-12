@@ -133,7 +133,6 @@ p {
 .project__item--wrapper {
   display: flex;
   flex-direction: column;
-  background: white;
   box-shadow: 0 0 10px #000000;
   width: 90vw;
   justify-content: space-between;
