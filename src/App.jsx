@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CallToAction from './components/buttons/CallToAction';
 import ContactView from './components/contact/ContactView';
+import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Portrait from './components/portrait/Portrait';
 import ProjectsView from './components/projects/ProjectsView';
@@ -27,6 +28,7 @@ function App() {
         <SkillsView />
         <ContactView />
       </main>
+      <Footer />
     </div>
   );
 }

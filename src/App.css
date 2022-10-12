@@ -256,6 +256,14 @@ p {
   border: 1px solid #00dfc4;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
 /*Device too slow only : replace threejs*/
 .mobile__herobanner--container {
   display: flex;
