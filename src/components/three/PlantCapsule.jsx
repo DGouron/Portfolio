@@ -6,167 +6,489 @@ source: https://sketchfab.com/3d-models/sci-fi-plant-capsule-bd2d05db1bf24143ac2
 title: Sci-Fi Plant Capsule
 */
 
-import React, { useEffect, useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
-import { goTo } from '../../utils/navigation'
+import React, { useEffect, useRef } from 'react';
+import { useGLTF, useAnimations } from '@react-three/drei';
+import { goTo } from '../../utils/navigation';
 import TextCustom from './TextCustom';
 
-export default function PlantCapsule({position, rotation, scale}) {
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF('assets/plant/plantCapsule-transformed.glb')
-  const { actions } = useAnimations(animations, group)
+export default function PlantCapsule({ position, rotation, scale }) {
+  const group = useRef();
+  const { nodes, materials, animations } = useGLTF('assets/plant/scene.gltf');
+  const { actions } = useAnimations(animations, group);
 
   const [isHovered, setIsHovered] = React.useState(false);
   const [cameraRotation, setCameraRotation] = React.useState([0, 0, 0]);
 
-  function handleTabletClick(){
+  function handleTabletClick() {
     goTo('projects');
   }
 
   useEffect(() => {
     actions['ArmatureAction.002'].play();
     actions['ArmatureAction.002'].setDuration(2);
-  }, [actions])
+  }, [actions]);
 
   return (
     <>
-    <group ref={group} dispose={null} position={position} rotation={rotation} scale={scale}
-     onClick={() => handleTabletClick()}
-     onPointerEnter={(e ) => {
-       setIsHovered(true),
-       setCameraRotation(e.camera.rotation)
-     }}
-     onPointerLeave={() => setIsHovered(false)}>
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
-          <group name="root">
-            <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
-              <group name="Armature_12" scale={0.1}>
-                <group name="Bone_2">
-                  <group name="Bone001_1" position={[0, 3.16, 0]} rotation={[0, -0.03, 0]}>
-                    <group name="Plane016_0" position={[0.02, 0.14, 0.02]} rotation={[Math.PI, -1.16, Math.PI]} scale={9.81}>
-                      <mesh name="Object_7" castShadow receiveShadow geometry={nodes.Object_7.geometry} material={materials['Capsule_01.001']} />
+      <group
+        ref={group}
+        dispose={null}
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        onClick={() => handleTabletClick()}
+        onPointerEnter={(e) => {
+          setIsHovered(true), setCameraRotation(e.camera.rotation);
+        }}
+        onPointerLeave={() => setIsHovered(false)}
+      >
+        <group name='Sketchfab_Scene'>
+          <group name='Sketchfab_model' rotation={[-Math.PI / 2, 0, 0]}>
+            <group name='root'>
+              <group name='GLTF_SceneRootNode' rotation={[Math.PI / 2, 0, 0]}>
+                <group name='Armature_12' scale={0.1}>
+                  <group name='Bone_2'>
+                    <group name='Bone001_1' position={[0, 3.16, 0]} rotation={[0, -0.03, 0]}>
+                      <group
+                        name='Plane016_0'
+                        position={[0.02, 0.14, 0.02]}
+                        rotation={[Math.PI, -1.16, Math.PI]}
+                        scale={9.81}
+                      >
+                        <mesh
+                          name='Object_7'
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_7.geometry}
+                          material={materials['Capsule_01.001']}
+                        />
+                      </group>
+                    </group>
+                  </group>
+                  <group name='Bone002_11' position={[0, -0.49, 0]}>
+                    <group
+                      name='Bone003_4'
+                      position={[0.1, 2.04, 0.05]}
+                      rotation={[1.02, -0.04, 0.42]}
+                    >
+                      <group
+                        name='Plane001_3'
+                        position={[0, 0, -0.01]}
+                        rotation={[1.22, -0.08, -2.96]}
+                        scale={9.81}
+                      >
+                        <mesh
+                          name='Object_11'
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_11.geometry}
+                          material={materials.Leafs}
+                        />
+                      </group>
+                    </group>
+                    <group
+                      name='Bone004_6'
+                      position={[0.1, 2.65, 0.04]}
+                      rotation={[-0.41, 0.13, -0.59]}
+                    >
+                      <group name='Plane_5' rotation={[1.6, 0.04, 0.95]} scale={9.81}>
+                        <mesh
+                          name='Object_14'
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_14.geometry}
+                          material={materials.Leafs}
+                        />
+                      </group>
+                    </group>
+                    <group
+                      name='Bone005_8'
+                      position={[0.11, 2.38, 0.04]}
+                      rotation={[-0.97, 0.33, 0.46]}
+                    >
+                      <group name='Plane003_7' rotation={[1.62, 0.01, 0.28]} scale={9.81}>
+                        <mesh
+                          name='Object_17'
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_17.geometry}
+                          material={materials.Leafs}
+                        />
+                      </group>
+                    </group>
+                    <group
+                      name='Bone006_10'
+                      position={[0.04, 1.56, -0.15]}
+                      rotation={[-0.83, 0.35, 0.18]}
+                    >
+                      <group
+                        name='Plane002_9'
+                        position={[0, 0, 0.01]}
+                        rotation={[1.65, 0.04, 0.16]}
+                        scale={9.81}
+                      >
+                        <mesh
+                          name='Object_20'
+                          castShadow
+                          receiveShadow
+                          geometry={nodes.Object_20.geometry}
+                          material={materials.Leafs}
+                        />
+                      </group>
                     </group>
                   </group>
                 </group>
-                <group name="Bone002_11" position={[0, -0.49, 0]}>
-                  <group name="Bone003_4" position={[0.1, 2.04, 0.05]} rotation={[1.02, -0.04, 0.42]}>
-                    <group name="Plane001_3" position={[0, 0, -0.01]} rotation={[1.22, -0.08, -2.96]} scale={9.81}>
-                      <mesh name="Object_11" castShadow receiveShadow geometry={nodes.Object_11.geometry} material={materials.Leafs} />
-                    </group>
-                  </group>
-                  <group name="Bone004_6" position={[0.1, 2.65, 0.04]} rotation={[-0.41, 0.13, -0.59]}>
-                    <group name="Plane_5" rotation={[1.6, 0.04, 0.95]} scale={9.81}>
-                      <mesh name="Object_14" castShadow receiveShadow geometry={nodes.Object_14.geometry} material={materials.Leafs} />
-                    </group>
-                  </group>
-                  <group name="Bone005_8" position={[0.11, 2.38, 0.04]} rotation={[-0.97, 0.33, 0.46]}>
-                    <group name="Plane003_7" rotation={[1.62, 0.01, 0.28]} scale={9.81}>
-                      <mesh name="Object_17" castShadow receiveShadow geometry={nodes.Object_17.geometry} material={materials.Leafs} />
-                    </group>
-                  </group>
-                  <group name="Bone006_10" position={[0.04, 1.56, -0.15]} rotation={[-0.83, 0.35, 0.18]}>
-                    <group name="Plane002_9" position={[0, 0, 0.01]} rotation={[1.65, 0.04, 0.16]} scale={9.81}>
-                      <mesh name="Object_20" castShadow receiveShadow geometry={nodes.Object_20.geometry} material={materials.Leafs} />
-                    </group>
-                  </group>
+                <group
+                  name='Cylinder003_13'
+                  position={[0, 0.25, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_22'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_22.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
                 </group>
-              </group>
-              <group name="Cylinder003_13" position={[0, 0.25, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_22" castShadow receiveShadow geometry={nodes.Object_22.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder004_14" position={[0, 0.48, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_24" castShadow receiveShadow geometry={nodes.Object_24.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder005_15" position={[0, 0.48, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_26" castShadow receiveShadow geometry={nodes.Object_26.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder006_16" position={[0, 0.48, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_28" castShadow receiveShadow geometry={nodes.Object_28.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder007_17" position={[0.13, 0.34, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_30" castShadow receiveShadow geometry={nodes.Object_30.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder008_18" position={[0, 0.25, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_32" castShadow receiveShadow geometry={nodes.Object_32.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder012_19" position={[-0.08, 0.38, 0.1]} rotation={[2.23, -0.64, 0.93]}>
-                <mesh name="Object_34" castShadow receiveShadow geometry={nodes.Object_34.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder013_20" position={[0, 0.48, 0]} rotation={[0, Math.PI / 2, 0]}>
-                <mesh name="Object_36" castShadow receiveShadow geometry={nodes.Object_36.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder014_21" position={[-0.14, 0.34, 0]} rotation={[0, Math.PI / 2, 0]}>
-                <mesh name="Object_38" castShadow receiveShadow geometry={nodes.Object_38.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder015_22" position={[0, 0.49, 0]} rotation={[0, Math.PI / 2, 0]}>
-                <mesh name="Object_40" castShadow receiveShadow geometry={nodes.Object_40.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder016_23" position={[0, 0.49, 0]} rotation={[0, Math.PI / 2, 0]}>
-                <mesh name="Object_42" castShadow receiveShadow geometry={nodes.Object_42.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder019_24" position={[-0.03, 0.48, 0]} rotation={[0, Math.PI / 2, 0]}>
-                <mesh name="Object_44" castShadow receiveShadow geometry={nodes.Object_44.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder020_25" position={[0, 0.45, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_46" castShadow receiveShadow geometry={nodes.Object_46.geometry} material={materials['Capsule_01.001']} />
-              </group>
-              <group name="Cylinder001_26" position={[0, 0.15, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_48" castShadow receiveShadow geometry={nodes.Object_48.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cylinder009_27" position={[0, 0.15, 0]}>
-                <mesh name="Object_50" castShadow receiveShadow geometry={nodes.Object_50.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cylinder002_28" position={[-0.06, 0.12, 0.1]} rotation={[0, 0.94, 0]}>
-                <mesh name="Object_52" castShadow receiveShadow geometry={nodes.Object_52.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cube001_29" position={[-0.11, 0.04, 0.06]} rotation={[0, -1.08, 0]}>
-                <mesh name="Object_54" castShadow receiveShadow geometry={nodes.Object_54.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cube002_30" position={[-0.1, 0.04, 0.08]} rotation={[0, -0.86, 0]}>
-                <mesh name="Object_56" castShadow receiveShadow geometry={nodes.Object_56.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="BezierCurve_31" position={[-0.07, 0.3, 0.1]} rotation={[-Math.PI, 0.68, Math.PI / 2]}>
-                <mesh name="Object_58" castShadow receiveShadow geometry={nodes.Object_58.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="BezierCurve001_32" position={[-0.08, 0.3, 0.09]} rotation={[-Math.PI, 0.68, Math.PI / 2]}>
-                <mesh name="Object_60" castShadow receiveShadow geometry={nodes.Object_60.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="BezierCurve002_33" position={[-0.08, 0.3, 0.09]} rotation={[-Math.PI, 0.68, Math.PI / 2]}>
-                <mesh name="Object_62" castShadow receiveShadow geometry={nodes.Object_62.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cylinder010_34" position={[-0.07, 0.23, 0.09]} rotation={[0.05, -0.09, 0.01]}>
-                <mesh name="Object_64" castShadow receiveShadow geometry={nodes.Object_64.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cylinder011_35" position={[-0.09, 0.35, 0.1]} rotation={[-0.08, 0.01, -0.4]}>
-                <mesh name="Object_66" castShadow receiveShadow geometry={nodes.Object_66.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cylinder017_36">
-                <mesh name="Object_68" castShadow receiveShadow geometry={nodes.Object_68.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cylinder018_37" position={[0, -0.01, 0]} rotation={[0, -0.61, 0]}>
-                <mesh name="Object_70" castShadow receiveShadow geometry={nodes.Object_70.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Cylinder021_38" position={[-0.11, 0.06, 0.04]}>
-                <mesh name="Object_72" castShadow receiveShadow geometry={nodes.Object_72.geometry} material={materials['Capsule_02.001']} />
-              </group>
-              <group name="Ground001_39" position={[0, -0.06, 0]} rotation={[-Math.PI / 2, 0, -Math.PI / 2]} scale={1.01}>
-                <mesh name="Object_74" castShadow receiveShadow geometry={nodes.Object_74.geometry} material={materials['Ground.002']} />
-              </group>
-              <group name="Cylinder_40" position={[0, 0.15, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                <mesh name="Object_76" castShadow receiveShadow geometry={nodes.Object_76.geometry} material={materials['Capsule_03.001']} />
-              </group>
-              <group name="Cube003_41" position={[0, -0.03, 0]} rotation={[-0.05, -Math.PI / 2, 0]}>
-                <mesh name="Object_78" castShadow receiveShadow geometry={nodes.Object_78.geometry} material={materials['Capsule_03.001']} />
+                <group
+                  name='Cylinder004_14'
+                  position={[0, 0.48, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_24'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_24.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder005_15'
+                  position={[0, 0.48, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_26'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_26.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder006_16'
+                  position={[0, 0.48, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_28'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_28.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder007_17'
+                  position={[0.13, 0.34, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_30'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_30.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder008_18'
+                  position={[0, 0.25, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_32'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_32.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder012_19'
+                  position={[-0.08, 0.38, 0.1]}
+                  rotation={[2.23, -0.64, 0.93]}
+                >
+                  <mesh
+                    name='Object_34'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_34.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group name='Cylinder013_20' position={[0, 0.48, 0]} rotation={[0, Math.PI / 2, 0]}>
+                  <mesh
+                    name='Object_36'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_36.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder014_21'
+                  position={[-0.14, 0.34, 0]}
+                  rotation={[0, Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_38'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_38.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group name='Cylinder015_22' position={[0, 0.49, 0]} rotation={[0, Math.PI / 2, 0]}>
+                  <mesh
+                    name='Object_40'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_40.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group name='Cylinder016_23' position={[0, 0.49, 0]} rotation={[0, Math.PI / 2, 0]}>
+                  <mesh
+                    name='Object_42'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_42.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder019_24'
+                  position={[-0.03, 0.48, 0]}
+                  rotation={[0, Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_44'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_44.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder020_25'
+                  position={[0, 0.45, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_46'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_46.geometry}
+                    material={materials['Capsule_01.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder001_26'
+                  position={[0, 0.15, 0]}
+                  rotation={[0, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_48'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_48.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group name='Cylinder009_27' position={[0, 0.15, 0]}>
+                  <mesh
+                    name='Object_50'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_50.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group name='Cylinder002_28' position={[-0.06, 0.12, 0.1]} rotation={[0, 0.94, 0]}>
+                  <mesh
+                    name='Object_52'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_52.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group name='Cube001_29' position={[-0.11, 0.04, 0.06]} rotation={[0, -1.08, 0]}>
+                  <mesh
+                    name='Object_54'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_54.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group name='Cube002_30' position={[-0.1, 0.04, 0.08]} rotation={[0, -0.86, 0]}>
+                  <mesh
+                    name='Object_56'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_56.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group
+                  name='BezierCurve_31'
+                  position={[-0.07, 0.3, 0.1]}
+                  rotation={[-Math.PI, 0.68, Math.PI / 2]}
+                >
+                  <mesh
+                    name='Object_58'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_58.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group
+                  name='BezierCurve001_32'
+                  position={[-0.08, 0.3, 0.09]}
+                  rotation={[-Math.PI, 0.68, Math.PI / 2]}
+                >
+                  <mesh
+                    name='Object_60'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_60.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group
+                  name='BezierCurve002_33'
+                  position={[-0.08, 0.3, 0.09]}
+                  rotation={[-Math.PI, 0.68, Math.PI / 2]}
+                >
+                  <mesh
+                    name='Object_62'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_62.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder010_34'
+                  position={[-0.07, 0.23, 0.09]}
+                  rotation={[0.05, -0.09, 0.01]}
+                >
+                  <mesh
+                    name='Object_64'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_64.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group
+                  name='Cylinder011_35'
+                  position={[-0.09, 0.35, 0.1]}
+                  rotation={[-0.08, 0.01, -0.4]}
+                >
+                  <mesh
+                    name='Object_66'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_66.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group name='Cylinder017_36'>
+                  <mesh
+                    name='Object_68'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_68.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group name='Cylinder018_37' position={[0, -0.01, 0]} rotation={[0, -0.61, 0]}>
+                  <mesh
+                    name='Object_70'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_70.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group name='Cylinder021_38' position={[-0.11, 0.06, 0.04]}>
+                  <mesh
+                    name='Object_72'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_72.geometry}
+                    material={materials['Capsule_02.001']}
+                  />
+                </group>
+                <group
+                  name='Ground001_39'
+                  position={[0, -0.06, 0]}
+                  rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+                  scale={1.01}
+                >
+                  <mesh
+                    name='Object_74'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_74.geometry}
+                    material={materials['Ground.002']}
+                  />
+                </group>
+                <group name='Cylinder_40' position={[0, 0.15, 0]} rotation={[0, -Math.PI / 2, 0]}>
+                  <mesh
+                    name='Object_76'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_76.geometry}
+                    material={materials['Capsule_03.001']}
+                  />
+                </group>
+                <group
+                  name='Cube003_41'
+                  position={[0, -0.03, 0]}
+                  rotation={[-0.05, -Math.PI / 2, 0]}
+                >
+                  <mesh
+                    name='Object_78'
+                    castShadow
+                    receiveShadow
+                    geometry={nodes.Object_78.geometry}
+                    material={materials['Capsule_03.001']}
+                  />
+                </group>
               </group>
             </group>
           </group>
         </group>
       </group>
-    </group>
-    {isHovered ? <TextCustom message={"Voir mes projets"} position={[position[0] + 150, position[1] + 200, position[2]]} color={"#ffffff"} size={20} rotation={cameraRotation} bevelThickness={.5} /> : null }
+      {isHovered ? (
+        <TextCustom
+          message={'Voir mes projets'}
+          position={[position[0] + 150, position[1] + 200, position[2]]}
+          color={'#ffffff'}
+          size={20}
+          rotation={cameraRotation}
+          bevelThickness={0.5}
+        />
+      ) : null}
     </>
-  )
+  );
 }
 
-useGLTF.preload('assets/plant//plantCapsule-transformed.glb')
+useGLTF.preload('assets/plant//plantCapsule-transformed.glb');
