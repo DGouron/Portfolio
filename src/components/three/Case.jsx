@@ -10,44 +10,92 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 import TextCustom from './TextCustom';
 
-export default function Case({position, rotation, scale}) {
-  const { nodes, materials } = useGLTF('assets/case/case-transformed.glb')
+export default function Case({ position, rotation, scale }) {
+  const { nodes, materials } = useGLTF('assets/case/case.gltf');
   const [isHovered, setIsHovered] = React.useState(false);
   const [cameraRotation, setCameraRotation] = React.useState([0, 0, 0]);
 
   return (
     <>
-      <group position={position} rotation={rotation} scale={scale} dispose={null}
-      onPointerEnter={(e ) => {
-        setIsHovered(true),
-        setCameraRotation(e.camera.rotation)
-      }}
-      onPointerLeave={() => setIsHovered(false)}>
+      <group
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        dispose={null}
+        onPointerEnter={(e) => {
+          setIsHovered(true), setCameraRotation(e.camera.rotation);
+        }}
+        onPointerLeave={() => setIsHovered(false)}
+      >
         <group rotation={[-Math.PI / 2, 0, 0]}>
           <group rotation={[Math.PI / 2, 0, 0]}>
-            <mesh castShadow receiveShadow geometry={nodes.defaultMaterial.geometry} material={materials.DefaultMaterial} />
-            <mesh castShadow receiveShadow geometry={nodes.defaultMaterial_1.geometry} material={materials.DefaultMaterial} />
-            <mesh castShadow receiveShadow geometry={nodes.defaultMaterial_2.geometry} material={materials.DefaultMaterial} />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.defaultMaterial.geometry}
+              material={materials.DefaultMaterial}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.defaultMaterial_1.geometry}
+              material={materials.DefaultMaterial}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.defaultMaterial_2.geometry}
+              material={materials.DefaultMaterial}
+            />
           </group>
         </group>
       </group>
-      {isHovered ? 
-        <group name="credits__items">
-          <TextCustom message={"Crédits"} 
-          position={[350, 180, 200]} color={"#cccccc"} size={13} rotation={cameraRotation} bevelThickness={.3} />
-          <TextCustom message={"Case, author : Konstantina Beratze"} 
-          position={[300, 130, 200]} color={"#cccccc"} size={11} rotation={cameraRotation} bevelThickness={.3} />
-          <TextCustom message={"Holotable, author : Uğur Yakışık"} 
-          position={[300, 100, 200]} color={"#cccccc"} size={11} rotation={cameraRotation} bevelThickness={.3} />
-          <TextCustom message={"Plant Capsule, author : Berk Gedik"} 
-          position={[300, 70, 200]} color={"#cccccc"} size={11} rotation={cameraRotation} bevelThickness={.3} />
-          <TextCustom message={"Lamp, author : inuhitman"} 
-          position={[300, 40, 200]} color={"#cccccc"} size={11} rotation={cameraRotation} bevelThickness={.3} /> 
+      {isHovered ? (
+        <group name='credits__items'>
+          <TextCustom
+            message={'Crédits'}
+            position={[350, 180, 200]}
+            color={'#cccccc'}
+            size={13}
+            rotation={cameraRotation}
+            bevelThickness={0.3}
+          />
+          <TextCustom
+            message={'Case, author : Konstantina Beratze'}
+            position={[300, 130, 200]}
+            color={'#cccccc'}
+            size={11}
+            rotation={cameraRotation}
+            bevelThickness={0.3}
+          />
+          <TextCustom
+            message={'Holotable, author : Uğur Yakışık'}
+            position={[300, 100, 200]}
+            color={'#cccccc'}
+            size={11}
+            rotation={cameraRotation}
+            bevelThickness={0.3}
+          />
+          <TextCustom
+            message={'Plant Capsule, author : Berk Gedik'}
+            position={[300, 70, 200]}
+            color={'#cccccc'}
+            size={11}
+            rotation={cameraRotation}
+            bevelThickness={0.3}
+          />
+          <TextCustom
+            message={'Lamp, author : inuhitman'}
+            position={[300, 40, 200]}
+            color={'#cccccc'}
+            size={11}
+            rotation={cameraRotation}
+            bevelThickness={0.3}
+          />
         </group>
-       : null }
- 
+      ) : null}
     </>
-  )
+  );
 }
 
-useGLTF.preload('assets/case/case-transformed.glb')
+useGLTF.preload('assets/case/case-transformed.glb');
