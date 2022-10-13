@@ -171,13 +171,15 @@ p {
 #skills .skillsview__section--link {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: auto;
   text-decoration: none;
 }
 .skills__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .softskill__item--icon,
 .hardskill__item--icon {
@@ -383,12 +385,12 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 40px;
+    gap: 50px;
     padding: 40px;
   }
   .project__item--wrapper {
-    flex: 1 1 30%;
-    height: 600px;
+    flex: 1 1 35%;
+    -minheight: 650px;
     border-radius: 20px;
     transition: box-shadow 0.5s;
   }
