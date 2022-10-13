@@ -185,6 +185,14 @@ p {
   height: 50px;
   margin: 10px;
 }
+.hardskill__item--container {
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0px #000000;
+}
+.hardskill__item--container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #000000;
+}
 .hardskill__item--title {
   display: flex;
   flex-direction: column;
