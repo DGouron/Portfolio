@@ -5,7 +5,7 @@ export const ProjectsData = [
     projectDescription:
       "Site internet de l'entreprise Whynotprint, spécialisée dans la sublimation d'objet",
     projectLargeImage: '/assets/thumbnails/Large_Whynotprint.webp',
-    projectDetails: ['- Front avec React', '- Envois de mail avec EmailJS'],
+    projectDetails: ['- Front avec React', '- Envoi de mails avec EmailJS'],
   },
   {
     projectName: 'More Rhum',
@@ -30,7 +30,7 @@ export const ProjectsData = [
     projectName: 'Linda Keisea',
     projectLink: 'https://lindakeisea.fr/',
     projectDescription:
-      "Création d'un blog de lecture et d'écriture. Ajout des statistiques Google Site Kit. Paramétrages de l'affichage, gestion des utilisateurs avec formulaire d'adhésion au site. Prise en compte du certificat SSL pour accroître la sécurité du site.",
+      "Création d'un blog de lecture et d'écriture. Ajout des statistiques Google Site Kit. Paramétrage de l'affichage, gestion des utilisateurs avec formulaire d'adhésion au site. Prise en compte du certificat SSL pour accroître la sécurité du site.",
     projectLargeImage: '/assets/thumbnails/Large_lindakeisea.webp',
     projectDetails: [
       "- Création et customation d'un site Wordpress",
@@ -47,14 +47,14 @@ export const ProjectsData = [
     projectDetails: [
       '- Front avec React',
       '- Utilisation de Router pour le Client Side Routing',
-      '- Nginx pour la gestion du reverse proxy (Projet initialement héberger sur un VPS OVH)',
+      '- Nginx pour la gestion du reverse proxy (Projet initialement hébergé sur un VPS OVH)',
     ],
   },
   {
     projectName: 'Print Message Visualizer',
     projectLink: 'https://www.unrealengine.com/marketplace/en-US/product/print-message-visualizer',
     projectDescription:
-      "Plugin Unreal Engine 4 fait en C++. PMV est un outil qui permet de traquer en temps réel, de sauvegarder et de comparer des données de jeu. Par exemple les points de passage des joueurs, les morts, etc. Parfais pour le debug d'un jeu multijoueur.",
+      "Plugin Unreal Engine 4 fait en C++. PMV est un outil qui permet de traquer en temps réel, de sauvegarder et de comparer des données de jeu. Par exemple les points de passage des joueurs, les morts, etc. Parfait pour le debug d'un jeu multijoueur.",
     projectLargeImage: '/assets/thumbnails/Large_PMV.webp',
     projectDetails: [
       '- Algorithmes C++',
