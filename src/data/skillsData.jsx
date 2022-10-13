@@ -36,6 +36,24 @@ export const SkillsData = [
       skillIconAlt: 'Logo Git',
       skillColor: '#47A248',
     },
+    {
+      skillName: 'C++',
+      skillIcon: 'assets/skills/logo_cpp.png',
+      skillIconAlt: 'Logo C++',
+      skillColor: '#00599C',
+    },
+    {
+      skillName: 'Javascript',
+      skillIcon: 'assets/skills/logo_js.png',
+      skillIconAlt: 'Logo Javascript',
+      skillColor: '#F7DF1E',
+    },
+    {
+      skillName: 'HTML 5',
+      skillIcon: 'assets/skills/logo_html.png',
+      skillIconAlt: 'Logo HTML 5',
+      skillColor: '#E34F26',
+    },
   ],
   [
     {
