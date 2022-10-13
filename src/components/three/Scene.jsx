@@ -16,37 +16,40 @@ import Poster from './Poster';
 
 function Scene() {
   const mugMesh = useLoader(FBXLoader, 'assets/mug/mug.fbx');
-  const floorUVMap = useLoader(TextureLoader, 'assets/floor/Sci_fi_Metal_Panel_004_basecolor.jpg');
-  const floorNormalMap = useLoader(TextureLoader, 'assets/floor/Sci_fi_Metal_Panel_004_normal.jpg');
+  const floorUVMap = useLoader(TextureLoader, 'assets/floor/Sci_fi_Metal_Panel_004_basecolor.webp');
+  const floorNormalMap = useLoader(
+    TextureLoader,
+    'assets/floor/Sci_fi_Metal_Panel_004_normal.webp',
+  );
   const floorRoughnessMap = useLoader(
     TextureLoader,
-    'assets/floor/Sci_fi_Metal_Panel_004_roughness.jpg',
+    'assets/floor/Sci_fi_Metal_Panel_004_roughness.webp',
   );
   const floorMetallicMap = useLoader(
     TextureLoader,
-    'assets/floor/Sci_fi_Metal_Panel_004_metallic.jpg',
+    'assets/floor/Sci_fi_Metal_Panel_004_metallic.webp',
   );
   const floorDisplacementMap = useLoader(
     TextureLoader,
-    'assets/floor/Sci_fi_Metal_Panel_004_height.png',
+    'assets/floor/Sci_fi_Metal_Panel_004_height.webp',
   );
   const floorAmbientOcclusionMap = useLoader(
     TextureLoader,
-    'assets/floor/Sci_fi_Metal_Panel_004_ambientOcclusion.jpg',
+    'assets/floor/Sci_fi_Metal_Panel_004_ambientOcclusion.webp',
   );
   const floorEmissiveMap = useLoader(
     TextureLoader,
-    'assets/floor/Sci_fi_Metal_Panel_004_emissive.jpg',
+    'assets/floor/Sci_fi_Metal_Panel_004_emissive.webp',
   );
 
-  const wallUVMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_basecolor.jpg');
-  const wallNormalMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_normal.jpg');
-  const wallRoughnessMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_roughness.jpg');
-  const wallMetallicMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_metallic.jpg');
-  const wallDisplacementMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_height.png');
+  const wallUVMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_basecolor.webp');
+  const wallNormalMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_normal.webp');
+  const wallRoughnessMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_roughness.webp');
+  const wallMetallicMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_metallic.webp');
+  const wallDisplacementMap = useLoader(TextureLoader, 'assets/wall/Sci-Fi_Wall_014_height.webp');
   const wallAmbientOcclusionMap = useLoader(
     TextureLoader,
-    'assets/wall/Sci-Fi_Wall_014_ambientOcclusion.jpg',
+    'assets/wall/Sci-Fi_Wall_014_ambientOcclusion.webp',
   );
 
   const githubSkill = useLoader(TextureLoader, 'assets/skills/logo_github.webp');
