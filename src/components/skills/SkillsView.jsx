@@ -7,7 +7,9 @@ import HardSkillItem from './HardSkillItem';
 function SkillsView() {
   return (
     <section id='skills'>
-      <h2 className='skillsview__section--title'>Softskills</h2>
+      <h2 className='skillsview__section--title' lang='fr'>
+        Softskills
+      </h2>
       <a
         href='/CV_DGouron_2022.pdf'
         className='skillsview__section--link'
@@ -32,7 +34,9 @@ function SkillsView() {
           />
         ))}
       </div>
-      <h2 className='skillsview__section--title'>Hardskills</h2>
+      <h2 className='skillsview__section--title' lang='fr'>
+        Hardskills
+      </h2>
       <div className='skills__list'>
         {SkillsData[0].map((skill) => (
           <HardSkillItem

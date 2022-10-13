@@ -5,7 +5,9 @@ import ContactForm from './ContactForm';
 function ContactView() {
   return (
     <section id='contact'>
-      <h2 className='contactview__section--title'>Me contacter</h2>
+      <h2 className='contactview__section--title' lang='fr'>
+        Me contacter
+      </h2>
       <ContactForm />
       <SocialBar />
     </section>

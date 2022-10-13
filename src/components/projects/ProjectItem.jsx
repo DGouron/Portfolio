@@ -9,12 +9,22 @@ function ProjectItem({ title, description, thumbnail, details, link }) {
         alt={'Image de présentation du site web ' + title}
         className='project__item--thumbnail'
       />
-      <h2 className='project__item--title'>{title}</h2>
-      <h3 className='project__item--description'>{description}</h3>
+      <h2 className='project__item--title' lang='fr'>
+        {title}
+      </h2>
+      <h3 className='project__item--description' lang='fr'>
+        {description}
+      </h3>
       <aside className='project__item--details'>
-        {details.map((detail, index) => (
-          <p key={detail + index}>{detail}</p>
-        ))}
+        <ul>
+          {details.map((detail, index) => (
+            <li key={detail + index} lang='fr'>
+              <p lang='fr' key={detail + index}>
+                {detail}
+              </p>
+            </li>
+          ))}
+        </ul>
       </aside>
       <a
         href={link}
