@@ -57,7 +57,7 @@ export const SkillsData = [
   ],
   [
     {
-      skillName: "Capacité d'aprentissage",
+      skillName: "Capacité d'apprentissage",
       skillIcon: 'assets/icons/learning_icon.svg',
       skillIconAlt: "Icone d'apprentissage",
     },
