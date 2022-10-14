@@ -165,6 +165,9 @@ p {
   object-fit: cover;
   object-position: top;
 }
+.project__item--details {
+  text-align: left;
+}
 .project__item--details > * {
   font-size: 0.75rem;
   font-family: 'Montserrat', sans-serif;
