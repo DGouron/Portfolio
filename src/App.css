@@ -140,7 +140,6 @@ p {
   box-shadow: 0 0 10px #000000;
   width: 90vw;
   justify-content: space-between;
-  margin-left: -18px;
 }
 .project__item--wrapper:hover .project__item--title {
   color: #68f563;
