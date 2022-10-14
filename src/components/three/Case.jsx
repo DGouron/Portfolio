@@ -98,4 +98,4 @@ export default function Case({ position, rotation, scale }) {
   );
 }
 
-useGLTF.preload('assets/case/case-transformed.glb');
+useGLTF.preload('assets/case/case.gltf');

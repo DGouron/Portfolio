@@ -491,4 +491,4 @@ export default function PlantCapsule({ position, rotation, scale }) {
   );
 }
 
-useGLTF.preload('assets/plant//plantCapsule-transformed.glb');
+useGLTF.preload('assets/plant/scene.gltf');
