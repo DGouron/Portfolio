@@ -1,5 +1,17 @@
 export const ProjectsData = [
   {
+    projectName: 'Test Hub - mini jeux',
+    projectLink: 'https://test-hub.netlify.app/',
+    projectDescription: 'Clone du site Humanbenchmark.com. Collection de mini-jeux cognitif.',
+    projectLargeImage: '/assets/thumbnails/Large_TestHub.webp',
+    projectDetails: [
+      '- Front avec React',
+      '- Utilisation de machine à état pour la gestion des mini-jeux',
+      '- Collaboration via Github',
+      '- Code source : https://github.com/BenoitDesnos/TestHub',
+    ],
+  },
+  {
     projectName: 'Whynotprint',
     projectLink: 'https://whynotprint.netlify.app/',
     projectDescription:
