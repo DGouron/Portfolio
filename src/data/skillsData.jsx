@@ -7,7 +7,13 @@ export const SkillsData = [
       skillColor: '#61DAFB',
     },
     {
-      skillName: 'Redux',
+      skillName: 'Typescript',
+      skillIcon: 'assets/skills/logo_ts.webp',
+      skillIconAlt: 'Logo Typescript',
+      skillColor: '#3178C6',
+    },
+    {
+      skillName: 'Redux-Toolkit',
       skillIcon: 'assets/skills/logo_redux.webp',
       skillIconAlt: 'Logo Redux',
       skillColor: '#764ABC',

@@ -59,7 +59,7 @@ function Scene() {
   const nginxSkill = useLoader(TextureLoader, 'assets/skills/logo_nginx.webp');
   const reduxSkill = useLoader(TextureLoader, 'assets/skills/logo_redux.webp');
   const sassSkill = useLoader(TextureLoader, 'assets/skills/logo_sass.webp');
-  const mysqlSkill = useLoader(TextureLoader, 'assets/skills/logo_mysql.webp');
+  const tsSkill = useLoader(TextureLoader, 'assets/skills/logo_ts.webp');
 
   const orbitControlsRef = useRef(null);
 
@@ -592,7 +592,7 @@ function Scene() {
           <boxGeometry args={[50, 50, 0.01]} />
           <meshStandardMaterial
             color='#eeeeee'
-            map={mysqlSkill}
+            map={tsSkill}
             transparent={true}
             emissive={'#ffffff'}
             emissiveIntensity={1}

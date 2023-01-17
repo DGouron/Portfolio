@@ -1,5 +1,18 @@
 export const ProjectsData = [
   {
+    projectName: 'SpaceX Rocket Information',
+    projectLink: 'https://spacex-informations.netlify.app/',
+    projectDescription: 'Application web qui affiche des informations sur les fusées SpaceX en utilisant leur API GraphQL.',
+    projectLargeImage: '/assets/thumbnails/Large_SpaceX.webp',
+    projectDetails: [
+      '- Front avec NextJS et TypeScript',
+      "- Utilisation de l'API GraphQL de SpaceX",
+      "- Création d'une librairie SpaceX/library",
+      "- Utilisaiton de Cypress pour les tests",
+      '- Code source : https://github.com/DGouron/spacex-rocket-information',
+    ],
+  },
+  {
     projectName: 'Test Hub - mini jeux',
     projectLink: 'https://test-hub.netlify.app/',
     projectDescription: 'Clone du site Humanbenchmark.com. Collection de mini-jeux cognitif.',
