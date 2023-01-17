@@ -398,6 +398,7 @@ footer {
   .project__item--wrapper {
     flex: 1 1 35%;
     min-height: 650px;
+    max-width: 800px;
     border-radius: 20px;
     transition: box-shadow 0.5s;
   }
