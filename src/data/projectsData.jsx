@@ -1,5 +1,16 @@
 export const ProjectsData = [
   {
+    projectName: 'Movies Tier List',
+    projectLink: 'https://movies-tierlist.netlify.app/',
+    projectDescription: 'Application web qui permet de créer des tier list de films.',
+    projectLargeImage: '/assets/thumbnails/Large_MoviesTierList.webp',
+    projectDetails: [
+      '- Front avec React et TypeScript et Material-UI pour le design',
+      '- Redux-Toolkit pour la gestion des états et de Zod pour la validation des données',
+      '- Utilisation de l’API Open Movies Database (OMDb)',
+      '- Code source : https://github.com/DGouron/Movie-app'
+  },
+  {
     projectName: 'SpaceX Rocket Information',
     projectLink: 'https://spacex-informations.netlify.app/',
     projectDescription: 'Application web qui affiche des informations sur les fusées SpaceX en utilisant leur API GraphQL.',
