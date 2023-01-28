@@ -8,18 +8,20 @@ export const ProjectsData = [
       '- Front avec React et TypeScript et Material-UI pour le design',
       '- Redux-Toolkit pour la gestion des états et de Zod pour la validation des données',
       '- Utilisation de l’API Open Movies Database (OMDb)',
-      '- Code source : https://github.com/DGouron/Movie-app'
+      '- Code source : https://github.com/DGouron/Movie-app',
+    ],
   },
   {
     projectName: 'SpaceX Rocket Information',
     projectLink: 'https://spacex-informations.netlify.app/',
-    projectDescription: 'Application web qui affiche des informations sur les fusées SpaceX en utilisant leur API GraphQL.',
+    projectDescription:
+      'Application web qui affiche des informations sur les fusées SpaceX en utilisant leur API GraphQL.',
     projectLargeImage: '/assets/thumbnails/Large_SpaceX.webp',
     projectDetails: [
       '- Front avec NextJS et TypeScript',
       "- Utilisation de l'API GraphQL de SpaceX",
       "- Création d'une librairie SpaceX/library",
-      "- Utilisaiton de Cypress pour les tests",
+      '- Utilisaiton de Cypress pour les tests',
       '- Code source : https://github.com/DGouron/spacex-rocket-information',
     ],
   },
