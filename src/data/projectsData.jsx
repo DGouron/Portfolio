@@ -15,7 +15,7 @@ export const ProjectsData = [
     projectName: 'SpaceX Rocket Information',
     projectLink: 'https://spacex-informations.netlify.app/',
     projectDescription:
-      'Application web qui affiche des informations sur les fusées SpaceX en utilisant leur API GraphQL.',
+      "Application web qui affiche des informations sur les fusées SpaceX en utilisant leur API GraphQL. Note : l'API utilisé est actuellement inutilisable. ",
     projectLargeImage: '/assets/thumbnails/Large_SpaceX.webp',
     projectDetails: [
       '- Front avec NextJS et TypeScript',
