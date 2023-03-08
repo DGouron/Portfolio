@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <p lang='fr'>Damien Gouron</p>
-      <h1 lang='fr'>Développeur fullstack</h1>
+      <h1 lang='fr'>Développeur front-end</h1>
       <h2 lang='fr'>
         « Après plusieurs années dans le développement de jeux vidéos, spécialisé dans les jeux de
         survie et de tir multijoueurs, je me suis tourné vers le développement web. Trentenaire

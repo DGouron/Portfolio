@@ -7,6 +7,12 @@ export const SkillsData = [
       skillColor: '#61DAFB',
     },
     {
+      skillName: 'NextJS',
+      skillIcon: 'assets/skills/logo_react.webp',
+      skillIconAlt: 'Logo NextJS',
+      skillColor: '#000000',
+    },
+    {
       skillName: 'Typescript',
       skillIcon: 'assets/skills/logo_ts.webp',
       skillIconAlt: 'Logo Typescript',
