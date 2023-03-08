@@ -11,7 +11,7 @@ function SkillsView() {
         Softskills
       </h2>
       <a
-        href='/CV_DGouron_Fullstack.pdf'
+        href='/CV_DGouron_Frontend.pdf'
         className='skillsview__section--link'
         title='Téléchargement du CV'
         target='_blank'

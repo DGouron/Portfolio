@@ -1,5 +1,5 @@
 import React from 'react';
-import portraitImage from '../../img/Portrait_2.webp';
+import portraitImage from '../../img/dgouron_portrait.webp';
 
 function Portrait() {
   return (
