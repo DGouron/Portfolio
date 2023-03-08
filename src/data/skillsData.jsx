@@ -8,7 +8,7 @@ export const SkillsData = [
     },
     {
       skillName: 'NextJS',
-      skillIcon: 'assets/skills/logo_react.webp',
+      skillIcon: 'assets/skills/logo_next.webp',
       skillIconAlt: 'Logo NextJS',
       skillColor: '#000000',
     },
