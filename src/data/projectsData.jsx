@@ -1,5 +1,17 @@
 export const ProjectsData = [
   {
+    projectName: 'Amicale des sapeurs-pompiers de Châtellerault',
+    projectLink: 'https://amicalespchatellerault.fr/',
+    projectDescription: "Site internet pour une association de sapeur pompier. Système d'authentification et de reservation",
+    projectLargeImage: '/assets/thumbnails/Large_AmicaleSP.png',
+    projectDetails: [
+      '- Front avec React et Material UI',
+      '- Redux-Toolkit pour la gestion des états et les appels API',
+      '- Base de données MongoDB',
+      '- VPS OVH et Nginx pour le reverse proxy',
+    ],
+  },
+  {
     projectName: 'Movies Tier List',
     projectLink: 'https://movies-tierlist.netlify.app/',
     projectDescription: 'Application web qui permet de créer des tier list de films.',
@@ -62,18 +74,6 @@ export const ProjectsData = [
       '- Front avec React',
       '- Utilisation de Redux',
       '- Utilisation de Router pour le Client Side Routing',
-    ],
-  },
-  {
-    projectName: 'Linda Keisea',
-    projectLink: 'https://lindakeisea.fr/',
-    projectDescription:
-      "Création d'un blog de lecture et d'écriture. Ajout des statistiques Google Site Kit. Paramétrage de l'affichage, gestion des utilisateurs avec formulaire d'adhésion au site. Prise en compte du certificat SSL pour accroître la sécurité du site.",
-    projectLargeImage: '/assets/thumbnails/Large_lindakeisea.webp',
-    projectDetails: [
-      "- Création et customation d'un site Wordpress",
-      '- Utilisation de plugins',
-      '- Modification de thème',
     ],
   },
   {
