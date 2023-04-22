@@ -23,6 +23,12 @@ function SocialBar() {
           iconCode={'fa-github'}
           brandColor={'#fff'}
         />
+        <SocialLink
+          link={'https://www.instagram.com/dgouron_dev/'}
+          title={'Instagram'}
+          iconCode={'fa-instagram'}
+          brandColor={'#c32aa3'}
+        />
       </ul>
     </article>
   );

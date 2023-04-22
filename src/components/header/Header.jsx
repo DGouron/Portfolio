@@ -1,5 +1,6 @@
 import React from 'react';
 import CallToAction from '../buttons/CallToAction';
+import SocialBar from '../social/SocialBar';
 
 function Header() {
   return (
@@ -7,13 +8,13 @@ function Header() {
       <p lang='fr'>Damien Gouron</p>
       <h1 lang='fr'>Développeur front-end</h1>
       <h2 lang='fr'>
-        « Après plusieurs années dans le développement de jeux vidéos, spécialisé dans les jeux de
-        survie et de tir multijoueurs, je me suis tourné vers le développement web. Trentenaire
-        autodidacte, j'ai pour passion de faire d’une vision projet une véritable application, avec
-        comme valeur ajoutée l’interaction avec les utilisateurs.»
+        « Spécialisé en javascript, je t'aide à concevoir ton application web ou ton site vitrine interactif. React, Nextjs, Typescript, j'utilise la techno qui fit avec ton projet.»
       </h2>
       {window.screen && window.screen.width > 768 ? (
-        <CallToAction text={'Me contacter'} action={'mail'} />
+        <>
+          <CallToAction text={'Prendre contact'} action={'mail'} />
+          <SocialBar />
+        </>
       ) : null}
     </header>
   );
