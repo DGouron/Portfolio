@@ -1,5 +1,16 @@
 export const ProjectsData = [
   {
+    projectName: 'Solife',
+    projectLink: 'https://www.solife.fr/',
+    projectDescription: "Site vitrine pour l'ONG Solife. Paiement en ligne, formulaire de contact avancé, système d'actualité, etc.",
+    projectLargeImage: '/assets/thumbnails/Large_Solife.webp',
+    projectDetails: [
+      '- Front en Next.js 13 avec TypeScript',
+      '- Utilisation de Nodemailer pour l’envoi de mail',
+      '- Chakra UI et Tailwind pour le design',
+    ],
+  },
+  {
     projectName: 'Amicale des sapeurs-pompiers de Châtellerault',
     projectLink: 'https://amicalespchatellerault.fr/',
     projectDescription: "Site internet pour une association de sapeur pompier. Système d'authentification et de reservation",
